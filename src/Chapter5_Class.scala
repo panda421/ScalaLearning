@@ -74,13 +74,6 @@ class Person5(val name: String, val age: Int) { // 主构造器的参数直接�
   println("Person5") // 主构造器会执行类中的所有语句
 }
 
-class Person6 private(var name: String, var age: Int) { // 主构造器成为私有必须通过辅助构造器构造
-  println("Person6")
-
-  def this(name: String, age: Int) = {
-    this(name, age)
-  }
-}
 
 class Network {
   class Member(val name:String) { //每个Network中的Member不一样
@@ -128,7 +121,6 @@ object Chapter5_Class {
     println(person4.getName)
 
     val person5 = new Person5("word", 100)
-    val person6 = new Person6("scala", 999)
 
     val chatter = new Network
     val myFace = new Network
